@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import LocationInfo from './components/LocationInfo';
 import ResidentList from './components/ResidentList';
 import SearchLocation from './components/SearchLocation';
 
@@ -28,11 +29,20 @@ function App() {
       <div className="search">
         <SearchLocation setLocation={setLocation}/>
       </div>
-      <h1>{location.name}</h1>
+
+      <div className="info">
+        <LocationInfo location={location}/>
+      </div>
 
       <div className="residents">
+        <h2>Residents</h2>
         <ResidentList residents={location.residents}/>
       </div>
+
+      <div className="footer">
+        <p><b>Designed by Edwin Avilez</b></p>
+      </div>
+
     </div>
   );
 }

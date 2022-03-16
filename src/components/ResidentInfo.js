@@ -12,11 +12,24 @@ const ResidentInfo = ({ residentUrl }) => {
             })
     }, [residentUrl])
 
-    console.log(character);
+    // console.log(character);
 
     return (
-        <div>
-            {character.name}
+        <div className='card'>
+            <div className="img">
+                 <img src={character.image} alt="Photography" />
+            </div>
+            <div className="inf-per">
+                <h4>{character.name}</h4>
+                <p><b>{character.status}</b></p>
+                <p>
+                    <b>Origin:</b> 
+                    <br /> 
+                    {character.origin?.name}
+                </p>
+                <p><b>Episodes appears: </b>{character.episode?.length}</p>  
+            </div>
+                     
         </div>
     );
 };

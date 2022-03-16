@@ -3,7 +3,7 @@ import ResidentInfo from './ResidentInfo';
 
 const ResidentList = ({ residents }) => {
     return (
-        <div>
+        <div className='cards'>
             {
                 residents?.map(resident => (
                     <ResidentInfo residentUrl={resident} key={resident} />
